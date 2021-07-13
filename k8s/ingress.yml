@@ -1,0 +1,14 @@
+apiVersion: extensions/v1beta1
+kind: Ingress
+metadata:
+ name: jquery-ingress
+ namespace: jquery
+spec:
+ rules:
+ - host: jquery.kkmn.info
+   http:
+     paths:
+     - path:
+       backend:
+         serviceName: jquery-svc
+         servicePort: 80
